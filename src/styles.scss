@@ -2,6 +2,9 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Borel&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
 
 @font-face {
     font-family: 'Break';
@@ -13,4 +16,16 @@ body { margin: 0; font-family: 'Quicksand', sans-serif; }
 
 .cursive {
     font-family: 'Borel', cursive;
+}
+
+.rubik-font {
+    font-family: 'Rubik', sans-serif;
+}
+
+.bebas-neue-font {
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+.archivo-font {
+    font-family: 'Archivo Black', sans-serif;
 }
