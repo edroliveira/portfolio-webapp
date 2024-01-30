@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MainComponent } from './main.component';
 import { TopContainerModule } from '../top-container/top-container.module';
+import { ContentContainerModule } from '../content-container/content-container.module';
 
 
 
@@ -11,7 +12,8 @@ import { TopContainerModule } from '../top-container/top-container.module';
   ],
   imports: [
     CommonModule,
-    TopContainerModule
+    TopContainerModule,
+    ContentContainerModule
   ],
   exports: [
     MainComponent
