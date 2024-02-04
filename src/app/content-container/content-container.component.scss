@@ -1,4 +1,5 @@
 .global-wrapper {
-    width: 100%;
-    background-color: rgb(255, 127, 195);
+    width: calc(100% - 100px);
+    margin: auto;
+    margin-top: 20px;
 }

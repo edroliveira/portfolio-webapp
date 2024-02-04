@@ -1,3 +1,6 @@
 <div class="global-wrapper">
-    <p>content-container works!</p>
+    <div *ngIf="screenComponent$ | async as screenComponent">
+        <app-work-info *ngIf="screenComponent.toString() == 'WORK_INFO'" id="workInfo"></app-work-info>
+        <app-projects *ngIf="screenComponent.toString() == 'PROJECTS'" id="projects"></app-projects>
+    </div>
 </div>

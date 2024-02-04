@@ -29,12 +29,10 @@
     </div>
 
     <div class="footer-wrapper">
-        <div class="option" (click)="openSelectedComponent()">
-            <span> SOBRE MEU TRABALHO </span>
-        </div>
-
-        <div class="option">
-            <span> ACESSE MEUS PROJETOS </span>
-        </div>
+        <ng-container *ngFor="let option of selectionOptions">
+            <div class="option" (click)="openSelectedComponent(option)">
+                <span>  {{ option.displayText }} </span>
+            </div>
+        </ng-container>
     </div>
 </div>
