@@ -1,0 +1,28 @@
+.content-wrapper {
+    width: 100%;
+    display: flex;
+}
+
+.profile-wrapper {
+    width: 40%;
+
+    .profile {
+        width: 300px;
+        height: 300px;
+        border-radius: 50%;
+        overflow: hidden;
+    
+        .profile-pic {
+            max-width: 300px;
+            margin-top: -25px;
+        }
+    }
+}
+
+.xp-wrapper {
+    width: 60%;
+}
+
+.expansion-panel {
+    width: 100%;
+}

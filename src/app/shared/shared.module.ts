@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatTooltipModule } from '@angular/material/tooltip';
+import { MatExpansionModule } from '@angular/material/expansion';
 
 
 @NgModule({
@@ -11,7 +12,8 @@ import { MatTooltipModule } from '@angular/material/tooltip';
   ],
   exports: [
     MatToolbarModule,
-    MatTooltipModule
+    MatTooltipModule,
+    MatExpansionModule
   ]
 })
 export class SharedModule { }

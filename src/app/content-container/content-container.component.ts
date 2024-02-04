@@ -1,4 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { ScreenComponentEnum } from '../shared/model/enum/screen-component.enum';
+import { Select } from '@ngxs/store';
+import { ScreenComponentSelectors } from '../shared/selector/screen-component-selector';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-content-container',
@@ -6,5 +10,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./content-container.component.scss']
 })
 export class ContentContainerComponent {
+
+  @Select(ScreenComponentSelectors.component)
+  screenComponent$!: Observable<ScreenComponentEnum>;
 
 }
