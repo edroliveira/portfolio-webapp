@@ -16,22 +16,32 @@
         </div>
 
         <div class="social-info-wrapper">
-            <a href="https://www.linkedin.com/in/ednaldo-romer-de-oliveira-j%C3%BAnior-5b98331b7/" target="_blank">
-                <img src="assets/svg-icons/linkedin.svg" alt="LinkedIn Icon" class="linkedin" matTooltip="LinkedIn" matTooltipPosition="before" />
-            </a>
-            <a href="https://github.com/edroliveira" target="_blank">
-                <img src="assets/svg-icons/github.svg" alt="GitHub Icon" class="github" matTooltip="GitHub Repository" matTooltipPosition="before" />
-            </a>
-            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=ednaldojunior2001@gmail.com" target="_blank">
-                <img src="assets/svg-icons/gmail.svg" alt="Gmail Icon" class="gmail" matTooltip="Gmail" matTooltipPosition="before" />
+            <a
+                *ngFor="let socialInfo of socialInfoOptions"
+                [href]="socialInfo.url"
+                target="_blank"
+            >
+                <img
+                    [src]="socialInfo.imgSrc"
+                    [alt]="socialInfo.description"
+                    [class]="socialInfo.className"
+                    [matTooltip]="socialInfo.tooltip"
+                    matTooltipPosition="before"
+                />
             </a>
         </div>
     </div>
 
     <div class="footer-wrapper">
         <ng-container *ngFor="let option of selectionOptions">
-            <div class="option" (click)="openSelectedComponent(option)">
-                <span>  {{ option.displayText }} </span>
+            <div *ngIf="screenComponent$ | async as screenComponent">
+                <div
+                    [ngClass]="screenComponent == option.screenComponent ? 'option-highlight' : ''"
+                    class="option"
+                    (click)="openSelectedComponent(option)"
+                >
+                    <span>  {{ option.displayText }} </span>
+                </div>
             </div>
         </ng-container>
     </div>
