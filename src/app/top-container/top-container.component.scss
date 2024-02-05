@@ -100,7 +100,7 @@
         }
     }
 
-    .option:hover {
+    .option:hover, .option-highlight {
         border-bottom: 4px solid rgba(245, 245, 220);
     }
 }

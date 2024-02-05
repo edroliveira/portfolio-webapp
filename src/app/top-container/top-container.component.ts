@@ -6,6 +6,14 @@ import { SetScreenComponent } from '../shared/action/screen-component-action';
 import { ScreenComponentSelectors } from '../shared/selector/screen-component-selector';
 import { Observable } from 'rxjs';
 
+interface ISocialInfo {
+  url: string,
+  imgSrc: string,
+  description: string,
+  className: string,
+  tooltip: string
+}
+
 @Component({
   selector: 'app-top-container',
   templateUrl: './top-container.component.html',
@@ -14,7 +22,31 @@ import { Observable } from 'rxjs';
 export class TopContainerComponent implements OnInit {
 
   @Select(ScreenComponentSelectors.component)
-  items$!: Observable<ScreenComponentEnum>;
+  screenComponent$!: Observable<ScreenComponentEnum>;
+
+  socialInfoOptions: ISocialInfo[] = [
+    {
+      url: 'https://www.linkedin.com/in/ednaldo-romer-de-oliveira-j%C3%BAnior-5b98331b7/',
+      imgSrc: 'assets/svg-icons/linkedin.svg',
+      description: 'LinkedIn Icon',
+      className: 'linkedin',
+      tooltip: 'LinkedIn'
+    },
+    {
+      url: 'https://github.com/edroliveira',
+      imgSrc: 'assets/svg-icons/github.svg',
+      description: 'GitHub Icon',
+      className: 'github',
+      tooltip: 'GitHub Repository'
+    },
+    {
+      url: 'https://mail.google.com/mail/?view=cm&fs=1&to=ednaldojunior2001@gmail.com',
+      imgSrc: 'assets/svg-icons/gmail.svg',
+      description: 'Gmail Icon',
+      className: 'gmail',
+      tooltip: 'Gmail'
+    }
+  ];
 
   selectionOptions: ScreenOption[] = [
     {

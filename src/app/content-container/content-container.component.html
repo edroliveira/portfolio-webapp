@@ -1,6 +1,15 @@
 <div class="global-wrapper">
     <div *ngIf="screenComponent$ | async as screenComponent">
-        <app-work-info *ngIf="screenComponent.toString() == 'WORK_INFO'" id="workInfo"></app-work-info>
-        <app-projects *ngIf="screenComponent.toString() == 'PROJECTS'" id="projects"></app-projects>
+        <app-work-info
+            *ngIf="screenComponent.toString() == 'WORK_INFO'"
+            id="workInfo"
+            [@fadeInOnEnter]
+        ></app-work-info>
+
+        <app-projects
+            *ngIf="screenComponent.toString() == 'PROJECTS'"
+            id="projects"
+            [@fadeInOnEnter]
+        ></app-projects>
     </div>
 </div>
