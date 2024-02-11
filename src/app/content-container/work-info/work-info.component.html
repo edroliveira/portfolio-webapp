@@ -3,24 +3,25 @@
         <div class="profile">
             <img src="assets/images/profile-pic.jpg" class="profile-pic" />
         </div>
+
+        <div class="bio">
+            <p class="bebas-neue-font name"> Ednaldo Romer de Oliveira Júnior </p>
+            <p class="bebas-neue-font age"> {{ age }} anos </p>
+        </div>
     </div>
 
     <div class="xp-wrapper">
-        <mat-accordion class="expansion-panel" multi>
-            <mat-expansion-panel style="border-radius: 15px;">
+        <mat-accordion class="accordion-panel" multi>
+            <mat-expansion-panel class="expansion-panel" *ngFor="let workItem of workInfo">
                 <mat-expansion-panel-header>
                     <mat-panel-title>
-                        Sobre mim
+                        <img [src]="workItem.icon" class="item-icon" />
+                        <span class="item-header"> {{ workItem.title }} </span>
                     </mat-panel-title>
                 </mat-expansion-panel-header>
 
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla scelerisque odio porttitor, ultricies magna quis, feugiat
-                    urna. Sed molestie erat ac lacus venenatis scelerisque. Vivamus et sodales mi. Nullam volutpat efficitur semper. Duis
-                    quis maximus justo. Nam eleifend odio a elit vehicula eleifend. Phasellus vitae mattis quam. Donec dapibus fermentum
-                    diam, at interdum justo viverra id. Vivamus rutrum ante neque, quis interdum odio eleifend vel. Aliquam erat volutpat.
-                    Mauris consequat sed tortor quis lobortis. Donec sagittis vulputate dui, et malesuada mi lacinia at. Proin at consequat
-                    turpis.
+                <p style="white-space: pre-wrap;">
+                    {{ workItem.content }}
                 </p>
             </mat-expansion-panel>
         </mat-accordion>
