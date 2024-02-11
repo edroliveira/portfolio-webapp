@@ -1,10 +1,37 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { WorkDataItem } from 'src/app/shared/model/work-data-item';
+import { workData } from './work-data';
+import { ScrollTo } from 'src/app/shared/action/scroll-action';
+import { Store } from '@ngxs/store';
+
 
 @Component({
   selector: 'app-work-info',
   templateUrl: './work-info.component.html',
   styleUrls: ['./work-info.component.scss']
 })
-export class WorkInfoComponent {
+export class WorkInfoComponent implements OnInit {
+
+  birthdate = new Date('2001-07-03T00:00');
+  age!: number;
+  workInfo: WorkDataItem[] = workData;
+
+  constructor(
+    private store: Store
+  ) { }
+
+  ngOnInit(): void {
+    this.getAge();
+  }
+
+  getAge() {
+    let timeDiff = Math.abs(Date.now() - this.birthdate.getTime());
+    let age = Math.floor((timeDiff / (1000 * 3600 * 24)) / 365.25);
+    this.age = age;
+  }
+
+  scrollTo(el: HTMLElement) {
+    this.store.dispatch(new ScrollTo(el, ''));
+  }
 
 }
