@@ -2,7 +2,7 @@
 
 <app-top-container></app-top-container>
 
-<div class="icon-wrapper">
+<div class="icon-wrapper" #bottomElementRef>
     <div *ngIf="scrolling$ | async as scrolling">
         <img
             *ngIf="scrolling.toString() == 'TOP'"
@@ -11,7 +11,7 @@
             alt="Arrow Down Icon" class="arrow-icon"
             matTooltip="Rolar para baixo"
             matTooltipPosition="left"
-            matTooltipShowDelay="1000"
+            matTooltipShowDelay="500"
         />
         <img *ngIf="scrolling.toString() == 'BOTTOM'"
             (click)="scrollTo(topElementRef, positionTop)"
@@ -20,13 +20,10 @@
             class="arrow-icon"
             matTooltip="Ir para cima"
             matTooltipPosition="left"
-            matTooltipShowDelay="1000"
+            matTooltipShowDelay="500"
         />
     </div>
-
 </div>
-
-<div #bottomElementRef></div>
 
 <app-content-container>
 </app-content-container>

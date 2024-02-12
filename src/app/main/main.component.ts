@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { ScreenComponentEnum } from '../shared/model/enum/screen-component.enum';
 import { Select, Store } from '@ngxs/store';
 import { Observable } from 'rxjs';
@@ -6,6 +6,7 @@ import { ScrollToSelector } from '../shared/selector/scroll-selector';
 import { SetScrollTo } from '../shared/action/scroll-action';
 import { ScrollingData } from '../shared/model/scrolling-data';
 import { ScrollingPositionEnum } from '../shared/model/enum/scrolling-position.enum';
+import { TopContainerComponent } from '../top-container/top-container.component';
 
 
 @Component({
@@ -21,6 +22,8 @@ export class MainComponent {
   selectedScreenComponent: ScreenComponentEnum = ScreenComponentEnum.WORK_INFO;
   positionTop: ScrollingPositionEnum = ScrollingPositionEnum.TOP;
   positionBottom: ScrollingPositionEnum = ScrollingPositionEnum.BOTTOM;
+
+  @ViewChild(TopContainerComponent) child!: TopContainerComponent;
 
   constructor(
     private store: Store
