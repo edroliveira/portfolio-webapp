@@ -8,10 +8,16 @@
             <p class="bebas-neue-font name"> Ednaldo Romer de Oliveira Júnior </p>
             <p class="bebas-neue-font age"> {{ age }} anos </p>
         </div>
+
+        <div class="tech">
+            <div *ngFor="let tech of techBrands">
+                <img [src]="tech.icon" [style]="tech.style" [matTooltip]="tech.name" />
+            </div>
+        </div>
     </div>
 
     <div class="xp-wrapper">
-        <mat-accordion class="accordion-panel" multi>
+        <mat-accordion class="accordion-panel">
             <mat-expansion-panel class="expansion-panel" *ngFor="let workItem of workInfo">
                 <mat-expansion-panel-header>
                     <mat-panel-title>
