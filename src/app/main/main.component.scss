@@ -2,16 +2,17 @@
     width: 100%;
     text-align: center;
     
-    .arrow-down {
+    .arrow-icon {
         width: 35px;
         height: 35px;
         cursor: pointer;
         transition: transform .2s;
     }
 
-    .arrow-down:hover {
+    .arrow-icon:hover {
         -ms-transform: scale(1.2);
         -webkit-transform: scale(1.2);
         transform: scale(1.2);
     }
+
 }

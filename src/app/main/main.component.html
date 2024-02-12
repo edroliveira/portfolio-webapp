@@ -1,8 +1,32 @@
+<div #topElementRef></div>
+
 <app-top-container></app-top-container>
 
 <div class="icon-wrapper">
-    <img src="assets/svg-icons/arrow-down.svg" alt="Arrow Down Icon" class="arrow-down" />
+    <div *ngIf="scrolling$ | async as scrolling">
+        <img
+            *ngIf="scrolling.toString() == 'TOP'"
+            (click)="scrollTo(bottomElementRef, positionBottom)"
+            src="assets/svg-icons/arrow-down.svg"
+            alt="Arrow Down Icon" class="arrow-icon"
+            matTooltip="Rolar para baixo"
+            matTooltipPosition="left"
+            matTooltipShowDelay="1000"
+        />
+        <img *ngIf="scrolling.toString() == 'BOTTOM'"
+            (click)="scrollTo(topElementRef, positionTop)"
+            src="assets/svg-icons/arrow-up.svg"
+            alt="Arrow Up Icon"
+            class="arrow-icon"
+            matTooltip="Ir para cima"
+            matTooltipPosition="left"
+            matTooltipShowDelay="1000"
+        />
+    </div>
+
 </div>
+
+<div #bottomElementRef></div>
 
 <app-content-container>
 </app-content-container>

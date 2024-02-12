@@ -3,6 +3,9 @@ import { CommonModule } from '@angular/common';
 import { MainComponent } from './main.component';
 import { TopContainerModule } from '../top-container/top-container.module';
 import { ContentContainerModule } from '../content-container/content-container.module';
+import { NgxsModule } from '@ngxs/store';
+import { ScrollState } from '../shared/state/scroll-state';
+import { SharedModule } from '../shared/shared.module';
 
 
 
@@ -13,7 +16,9 @@ import { ContentContainerModule } from '../content-container/content-container.m
   imports: [
     CommonModule,
     TopContainerModule,
-    ContentContainerModule
+    ContentContainerModule,
+    SharedModule,
+    NgxsModule.forFeature([ScrollState])
   ],
   exports: [
     MainComponent

@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { WorkDataItem } from 'src/app/shared/model/work-data-item';
 import { workData } from './work-data';
-import { ScrollTo } from 'src/app/shared/action/scroll-action';
 import { Store } from '@ngxs/store';
 
 
@@ -28,10 +27,6 @@ export class WorkInfoComponent implements OnInit {
     let timeDiff = Math.abs(Date.now() - this.birthdate.getTime());
     let age = Math.floor((timeDiff / (1000 * 3600 * 24)) / 365.25);
     this.age = age;
-  }
-
-  scrollTo(el: HTMLElement) {
-    this.store.dispatch(new ScrollTo(el, ''));
   }
 
 }
