@@ -26,9 +26,8 @@
                     </mat-panel-title>
                 </mat-expansion-panel-header>
 
-                <p style="white-space: pre-wrap;">
-                    {{ workItem.content }}
-                </p>
+                <div [innerHTML]="workItem.content" style="font-size: 18px;">                    
+                </div>
             </mat-expansion-panel>
         </mat-accordion>
     </div>
