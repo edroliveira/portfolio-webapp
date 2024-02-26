@@ -75,7 +75,7 @@ export const workData: WorkDataItem[] = [
         icon: 'assets/svg-icons/path.svg',
         content: `
             <br />
-            <span><b>Fóton Informática</b> - abril/2023 até atualmente</span>
+            <span><b>Fóton Informática</b> - abril/2023 até o momento</span>
             <br /><br />
 
             <span><b>Cresol Confederação</b> - fevereiro/2022 até março/2023</span>
