@@ -6,7 +6,7 @@ export const workData: WorkDataItem[] = [
         icon: 'assets/svg-icons/profile-favorite.svg',
         content: `
             <br />
-            <span>Olá! Meu nome é <b>Ednaldo</b>, e boas-vindas ao meu site de portfólio.</span>
+            <span>Olá! Meu nome é <strong>Ednaldo</strong>, e boas-vindas ao meu site de portfólio.</span>
         `
     },
     {
@@ -14,7 +14,7 @@ export const workData: WorkDataItem[] = [
         icon: 'assets/svg-icons/skill.svg',
         content: `
             <br />
-            <span><b>Idiomas</b></span>
+            <span><strong>Idiomas</strong></span>
             <ul>
                 <li>Português (Brasil) - Avançado/Fluente <img src="assets/svg-icons/brazil-flag.svg" /></li>
                 <li>Inglês - Avançado/Fluente <img src="assets/svg-icons/usa-flag.svg" /> <img src="assets/svg-icons/uk-flag.svg" /></li>
@@ -22,7 +22,7 @@ export const workData: WorkDataItem[] = [
             </ul>
             <br />
 
-            <span><b>Tecnologias e Linguagens de Programação</b></span>
+            <span><strong>Tecnologias e Linguagens de Programação</strong></span>
             <ul>
                 <li>Angular</li>
                 <li>TypeScript</li>
@@ -36,7 +36,7 @@ export const workData: WorkDataItem[] = [
             </ul>
             <br />
 
-            <span><b>IDE's e Plataformas</b></span>
+            <span><strong>IDE's e Plataformas</strong></span>
             <ul>
                 <li>Visual Studio Code</li>
                 <li>Eclipse</li>
@@ -46,7 +46,7 @@ export const workData: WorkDataItem[] = [
             </ul>
             <br />
 
-            <span><b>Padrões de trabalho e ferramentas de versionamento</b></span>
+            <span><strong>Padrões de trabalho e ferramentas de versionamento</strong></span>
             <ul>
                 <li>Metodologia Ágil (Scrum Master)</li>
                 <li>Git (Github, Gitlab, Gitflow, CI)</li>
@@ -63,11 +63,11 @@ export const workData: WorkDataItem[] = [
         icon: 'assets/svg-icons/graduation-hat.svg',
         content: `
             <br />
-            <span><b>Ciência da Computação</b> - Bacharelado</span><img src="assets/svg-icons/laptop.svg" />
+            <span><strong>Ciência da Computação</strong> - Bacharelado</span><img src="assets/svg-icons/laptop.svg" />
             <br /><br /><br />
-            <span>&emsp;<b>Universidade:</b> Centro Universitário de Brasília <b>(CEUB)</b></span>
+            <span>&emsp;<strong>Universidade:</strong> Centro Universitário de Brasília <strong>(CEUB)</strong></span>
             <br /><br />
-            <span>&emsp;<b>Período:</b> 1° Semestre 2019 <b>até</b> 1° Semestre 2023 (4 anos e meio)</span>
+            <span>&emsp;<strong>Período:</strong> 1° Semestre 2019 <strong>até</strong> 1° Semestre 2023 (4 anos e meio)</span>
         `
     },
     {
@@ -75,16 +75,16 @@ export const workData: WorkDataItem[] = [
         icon: 'assets/svg-icons/path.svg',
         content: `
             <br />
-            <span><b>Fóton Informática</b> - abril/2023 até o momento</span>
+            <span><strong>Fóton Informática</strong> - abril/2023 até o momento</span>
             <br /><br />
 
-            <span><b>Cresol Confederação</b> - fevereiro/2022 até março/2023</span>
+            <span><strong>Cresol Confederação</strong> - fevereiro/2022 até março/2023</span>
             <br /><br />
 
-            <span><b>MetaReports Telemedicina</b> - abril/2021 até fevereiro/2022</span>
+            <span><strong>MetaReports Telemedicina</strong> - abril/2021 até fevereiro/2022</span>
             <br /><br />
 
-            <span><b>Ministério da Infraestrutura</b> (estágio) - maio/2019 até abril/2021</span>
+            <span><strong>Ministério da Infraestrutura</strong> (estágio) - maio/2019 até abril/2021</span>
             <br /><br />
         `
     }

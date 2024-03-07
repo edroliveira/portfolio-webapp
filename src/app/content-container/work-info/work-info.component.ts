@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { WorkDataItem } from 'src/app/shared/model/work-data-item';
-import { workData } from './work-data';
+import { workData } from './data/work-data';
 import { TechBrand } from 'src/app/shared/model/tech-brand';
-import { techData } from './tech-data';
+import { techData } from './data/tech-data';
 
 
 @Component({

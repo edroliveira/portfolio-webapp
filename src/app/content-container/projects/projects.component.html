@@ -1,1 +1,14 @@
-<p>projects works!</p>
+<div class="content-wrapper">
+    <aside class="links-wrapper">
+        <ng-container *ngFor="let project of projects; let i = index">
+            <div class="link">
+                <span class="bebas-neue-font link-item"> {{ project.name }} - {{ project.type }} </span>
+                <mat-divider *ngIf="checkLastItem(i)" class="divider"></mat-divider>
+            </div>
+        </ng-container>
+    </aside>
+
+    <div class="projects-wrapper">
+        
+    </div>
+</div>
