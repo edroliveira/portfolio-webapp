@@ -1,7 +1,7 @@
-<div class="global-wrapper">
-    <div class="home-wrapper">
+<header class="global-wrapper">
+    <figure class="home-wrapper">
         <img src="assets/svg-icons/home.svg" alt="Home Icon" class="home" />
-    </div>
+    </figure>
 
     <div class="display-config">
         <div class="content-wrapper">
@@ -15,7 +15,7 @@
             </div>
         </div>
 
-        <div class="social-info-wrapper">
+        <nav class="social-info-wrapper">
             <a
                 *ngFor="let socialInfo of socialInfoOptions"
                 [href]="socialInfo.url"
@@ -29,7 +29,7 @@
                     matTooltipPosition="before"
                 />
             </a>
-        </div>
+        </nav>
     </div>
 
     <div class="footer-wrapper" #bottomElementRef>
@@ -45,4 +45,4 @@
             </div>
         </ng-container>
     </div>
-</div>
+</header>

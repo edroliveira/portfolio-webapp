@@ -3,7 +3,7 @@
 <app-top-container></app-top-container>
 
 <div class="icon-wrapper" #bottomElementRef>
-    <div *ngIf="scrolling$ | async as scrolling">
+    <figure *ngIf="scrolling$ | async as scrolling">
         <img
             *ngIf="scrolling.toString() == 'TOP'"
             (click)="scrollTo(bottomElementRef, positionBottom)"
@@ -22,7 +22,7 @@
             matTooltipPosition="left"
             matTooltipShowDelay="500"
         />
-    </div>
+    </figure>
 </div>
 
 <app-content-container>
