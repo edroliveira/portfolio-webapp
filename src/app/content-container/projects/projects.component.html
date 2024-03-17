@@ -1,14 +1,20 @@
 <div class="content-wrapper">
     <aside class="links-wrapper">
         <ng-container *ngFor="let project of projects; let i = index">
-            <div class="link">
+            <div
+                class="link" 
+                (click)="setProject(project)"
+            >
                 <span class="bebas-neue-font link-item"> {{ project.name }} - {{ project.type }} </span>
-                <mat-divider *ngIf="checkLastItem(i)" class="divider"></mat-divider>
             </div>
+
+            <mat-divider *ngIf="checkLastItem(i)" class="divider"></mat-divider>
         </ng-container>
     </aside>
 
     <div class="projects-wrapper">
-        
+        <ng-container *ngIf="selectedProject">
+            {{ selectedProject.content }}
+        </ng-container>
     </div>
 </div>

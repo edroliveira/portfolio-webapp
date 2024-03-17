@@ -5,21 +5,25 @@ export const projectData: Project[] = [
     {
         name: 'Potfolio WebApp',
         icon: '',
-        type: ProjectTypeEnum.PERSONAL
+        type: ProjectTypeEnum.PERSONAL,
+        content: 'Potfolio WebApp'
     },
     {
         name: 'Veterano Amigo',
         icon: '',
-        type: ProjectTypeEnum.PERSONAL
+        type: ProjectTypeEnum.PERSONAL,
+        content: 'Veterano Amigo'
     },
     {
         name: 'Timeless',
         icon: '',
-        type: ProjectTypeEnum.FREELANCE
+        type: ProjectTypeEnum.FREELANCE,
+        content: 'Timeless'
     },
     {
         name: 'Meta Médico',
         icon: '',
-        type: ProjectTypeEnum.CONTRACT
+        type: ProjectTypeEnum.CONTRACT,
+        content: 'Meta Médico'
     },
 ];

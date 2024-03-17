@@ -10,6 +10,11 @@ import { projectData } from './data/project-data';
 export class ProjectsComponent {
 
   projects: Project[] = projectData;
+  selectedProject!: Project;
+
+  setProject(project: Project) {
+    this.selectedProject = project;
+  }
 
   checkLastItem(index: number) {
     return index !== this.projects.length - 1;
