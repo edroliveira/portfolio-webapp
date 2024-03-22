@@ -2,7 +2,8 @@
     <aside class="links-wrapper">
         <ng-container *ngFor="let project of projects; let i = index">
             <div
-                class="link" 
+                class="link"
+                [ngClass]="{'link-highlight': (selectedProject === project)}"
                 (click)="setProject(project)"
             >
                 <span class="bebas-neue-font link-item"> {{ project.name }} - {{ project.type }} </span>
