@@ -10,6 +10,7 @@
     .links-wrapper {
         width: 25%;
         min-width: 250px;
+        height: fit-content;
         padding: 15px;
 
         .link {
@@ -23,7 +24,11 @@
             }
         }
 
-        .link:hover, .link-highlight {
+        .link:hover {
+            background-color: rgba(0, 0, 0, 0.126);
+        }
+
+        .link-highlight {
             background-color: rgba(8, 99, 169, 0.126);
         }
 

@@ -16,7 +16,7 @@ export const workData: WorkDataItem[] = [
             <br />
             <span><strong>Idiomas</strong></span>
             <ul>
-                <li>Português (Brasil) - Avançado/Fluente <img src="assets/svg-icons/brazil-flag.svg" /></li>
+                <li>Português (Brasil) - Nativo <img src="assets/svg-icons/brazil-flag.svg" /></li>
                 <li>Inglês - Avançado/Fluente <img src="assets/svg-icons/usa-flag.svg" /> <img src="assets/svg-icons/uk-flag.svg" /></li>
                 <li>Espanhol - Básico</li>
             </ul>
