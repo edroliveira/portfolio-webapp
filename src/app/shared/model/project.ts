@@ -4,6 +4,7 @@ export class Project {
     constructor(
         public name: string,
         public icon: string,
-        public type: ProjectTypeEnum
+        public type: ProjectTypeEnum,
+        public content: string
     ) { }
 }

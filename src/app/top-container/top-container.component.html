@@ -36,8 +36,8 @@
         <ng-container *ngFor="let option of selectionOptions">
             <div *ngIf="screenComponent$ | async as screenComponent">
                 <div
-                    [ngClass]="screenComponent == option.screenComponent ? 'option-highlight' : ''"
                     class="option"
+                    [ngClass]="{'option-highlight': (screenComponent === option.screenComponent)}"
                     (click)="openSelectedComponent(option)"
                 >
                     <span>  {{ option.displayText }} </span>
