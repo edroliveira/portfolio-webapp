@@ -7,6 +7,9 @@ export const workData: WorkDataItem[] = [
         content: `
             <br />
             <span>Olá! Meu nome é <strong>Ednaldo</strong>, e boas-vindas ao meu site de portfólio.</span>
+            <br />
+            <p>Eu sou Desenvolvedor WEB Fullstack há 5 anos, especializado em Angular e Java.</p>
+            <p>Minha trajetória inclui experiência acumulada de diversas empresas e trabalhos freelance.</p>
         `
     },
     {

@@ -16,6 +16,7 @@ export class WorkInfoComponent implements OnInit {
   age!: number;
   workInfo: WorkDataItem[] = workData;
   techBrands: TechBrand[] = techData;
+  isAutoExpandDisabled: boolean = false;
 
   ngOnInit(): void {
     this.getAge();
@@ -25,6 +26,14 @@ export class WorkInfoComponent implements OnInit {
     let timeDiff = Math.abs(Date.now() - this.birthdate.getTime());
     let age = Math.floor((timeDiff / (1000 * 3600 * 24)) / 365.25);
     this.age = age;
+  }
+
+  isExpandedOnInit(workItem: WorkDataItem, index: number): boolean {
+    return (!this.isAutoExpandDisabled && index === 0);
+  }
+
+  disableAutoExpansion() {
+    this.isAutoExpandDisabled = true;
   }
 
 }
