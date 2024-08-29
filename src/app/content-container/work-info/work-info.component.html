@@ -18,7 +18,11 @@
 
     <div class="xp-wrapper">
         <mat-accordion class="accordion-panel">
-            <mat-expansion-panel class="expansion-panel" *ngFor="let workItem of workInfo">
+            <mat-expansion-panel
+                class="expansion-panel"
+                *ngFor="let workItem of workInfo; let i = index"
+                [expanded]="isExpandedOnInit(workItem, i)"
+                (click)="disableAutoExpansion()">
                 <mat-expansion-panel-header>
                     <mat-panel-title>
                         <img [src]="workItem.icon" class="item-icon" />
