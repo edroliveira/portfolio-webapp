@@ -1,11 +1,10 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Component, Output } from '@angular/core';
 import { ScreenComponentEnum } from '../shared/model/enum/screen-component.enum';
 import { ScreenOption } from '../shared/model/screen-option';
 import { Select, Store } from '@ngxs/store';
 import { SetScreenComponent } from '../shared/action/screen-component-action';
 import { ScreenComponentSelectors } from '../shared/selector/screen-component-selector';
 import { Observable } from 'rxjs';
-import { SocialInfo } from '../shared/model/social-info';
 import { socialInfo } from './social-info-data';
 
 @Component({
@@ -13,10 +12,12 @@ import { socialInfo } from './social-info-data';
   templateUrl: './top-container.component.html',
   styleUrls: ['./top-container.component.scss']
 })
-export class TopContainerComponent implements OnInit {
+export class TopContainerComponent {
 
   @Select(ScreenComponentSelectors.component)
   screenComponent$!: Observable<ScreenComponentEnum>;
+
+  @Output() 
 
   socialInfoOptions = socialInfo;
 
@@ -34,10 +35,6 @@ export class TopContainerComponent implements OnInit {
   constructor(
     private store: Store
   ) { }
-
-  ngOnInit(): void {
-    
-  }
 
   openSelectedComponent(option: ScreenOption) {
     this.store.dispatch(new SetScreenComponent(option));
