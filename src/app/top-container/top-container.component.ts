@@ -1,4 +1,4 @@
-import { Component, OnInit, Output } from '@angular/core';
+import { Component, Output } from '@angular/core';
 import { ScreenComponentEnum } from '../shared/model/enum/screen-component.enum';
 import { ScreenOption } from '../shared/model/screen-option';
 import { Select, Store } from '@ngxs/store';

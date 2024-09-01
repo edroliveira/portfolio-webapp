@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component } from '@angular/core';
 import { ScreenComponentEnum } from '../shared/model/enum/screen-component.enum';
 import { Select } from '@ngxs/store';
 import { ScreenComponentSelectors } from '../shared/selector/screen-component-selector';
