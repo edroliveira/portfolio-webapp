@@ -4,20 +4,15 @@ import { TopContainerComponent } from './top-container.component';
 import { SharedModule } from '../shared/shared.module';
 import { NgxsModule } from '@ngxs/store';
 import { ScreenComponentState } from '../shared/state/screen-component-state';
-
-
+import { ContactInfoDialogComponent } from './dialog/contact-info-dialog/contact-info-dialog.component';
 
 @NgModule({
-  declarations: [
-    TopContainerComponent
-  ],
+  declarations: [TopContainerComponent, ContactInfoDialogComponent],
   imports: [
     CommonModule,
     SharedModule,
-    NgxsModule.forFeature([ScreenComponentState])
+    NgxsModule.forFeature([ScreenComponentState]),
   ],
-  exports: [
-    TopContainerComponent
-  ]
+  exports: [TopContainerComponent],
 })
-export class TopContainerModule { }
+export class TopContainerModule {}

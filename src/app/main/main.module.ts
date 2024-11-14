@@ -6,20 +6,18 @@ import { ContentContainerModule } from '../content-container/content-container.m
 import { NgxsModule } from '@ngxs/store';
 import { ScrollState } from '../shared/state/scroll-state';
 import { SharedModule } from '../shared/shared.module';
+import { ScreenBreakpointService } from '../service/screen-breakpoint.service';
 
 @NgModule({
-  declarations: [
-    MainComponent
-  ],
+  declarations: [MainComponent],
   imports: [
     CommonModule,
     TopContainerModule,
     ContentContainerModule,
     SharedModule,
-    NgxsModule.forFeature([ScrollState])
+    NgxsModule.forFeature([ScrollState]),
   ],
-  exports: [
-    MainComponent
-  ]
+  exports: [MainComponent],
+  providers: [ScreenBreakpointService],
 })
-export class MainModule { }
+export class MainModule {}

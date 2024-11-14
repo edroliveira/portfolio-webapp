@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { WorkDataItem } from 'src/app/shared/model/work-data-item';
 import { workData } from './data/work-data';
 import { TechBrand } from 'src/app/shared/model/tech-brand';
@@ -11,6 +11,8 @@ import { techData } from './data/tech-data';
   styleUrls: ['./work-info.component.scss']
 })
 export class WorkInfoComponent implements OnInit {
+
+  @Input() isMobileView!: boolean;
 
   birthdate = new Date('2001-07-03T00:00');
   age!: number;

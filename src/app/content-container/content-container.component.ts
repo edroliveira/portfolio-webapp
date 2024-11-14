@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { ScreenComponentEnum } from '../shared/model/enum/screen-component.enum';
 import { Select } from '@ngxs/store';
 import { ScreenComponentSelectors } from '../shared/selector/screen-component-selector';
@@ -14,6 +14,8 @@ import { fadeInOnEnterAnimation } from 'angular-animations';
   ]
 })
 export class ContentContainerComponent {
+
+  @Input() isMobileView!: boolean;
 
   @Select(ScreenComponentSelectors.component)
   screenComponent$!: Observable<ScreenComponentEnum>;

@@ -1,0 +1,17 @@
+<h2 mat-dialog-title> Portfólio e Contato </h2>
+<mat-dialog-content class="mat-typography">
+    <div *ngFor="let socialInfo of socialInfoOptions">
+        <a
+            mat-stroked-button
+            [href]="socialInfo.url"
+            target="_blank"
+            class="contact-info-option bebas-neue-font"
+        >
+            {{ socialInfo.tooltip }}
+        </a>
+    </div>
+</mat-dialog-content>
+
+<mat-dialog-actions align="end">
+    <button mat-button mat-dialog-close> Fechar </button>
+</mat-dialog-actions>

@@ -6,6 +6,8 @@ import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatRippleModule } from '@angular/material/core';
+import { MatButtonModule } from '@angular/material/button';
+import { MatDialogModule } from '@angular/material/dialog';
 
 
 @NgModule({
@@ -19,7 +21,9 @@ import { MatRippleModule } from '@angular/material/core';
     MatTooltipModule,
     MatExpansionModule,
     MatDividerModule,
-    MatRippleModule
+    MatRippleModule,
+    MatButtonModule,
+    MatDialogModule
   ]
 })
 export class SharedModule { }

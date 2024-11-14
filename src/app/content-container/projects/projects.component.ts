@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Project } from 'src/app/shared/model/project';
 import { projectData } from './data/project-data';
 
@@ -8,6 +8,8 @@ import { projectData } from './data/project-data';
   styleUrls: ['./projects.component.scss']
 })
 export class ProjectsComponent implements OnInit {
+
+  @Input() isMobileView!: boolean;
 
   projects: Project[] = projectData;
   selectedProject!: Project;

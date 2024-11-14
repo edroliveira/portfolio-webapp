@@ -1,5 +1,5 @@
-<div class="content-wrapper">
-    <aside class="profile-wrapper">
+<div [ngClass]="isMobileView ? 'content-wrapper-grid': 'content-wrapper-flex'">
+    <aside [ngClass]="isMobileView ? 'profile-wrapper-mobile' : 'profile-wrapper'">
         <figure class="profile">
             <img src="assets/images/profile-pic.jpg" class="profile-pic" />
         </figure>
@@ -9,14 +9,14 @@
             <p class="bebas-neue-font age"> {{ age }} anos </p>
         </div>
 
-        <div class="tech">
+        <div class="tech" *ngIf="!isMobileView">
             <div *ngFor="let tech of techBrands">
                 <img [src]="tech.icon" [style]="tech.style" [matTooltip]="tech.name" />
             </div>
         </div>
     </aside>
 
-    <div class="xp-wrapper">
+    <div [ngClass]="isMobileView ? 'xp-wrapper-mobile' : 'xp-wrapper'">
         <mat-accordion class="accordion-panel">
             <mat-expansion-panel
                 class="expansion-panel"

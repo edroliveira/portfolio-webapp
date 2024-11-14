@@ -1,14 +1,16 @@
-<main class="global-wrapper">
+<main class="global-wrapper" [ngClass]="isMobileView ? 'global-wrapper-mobile': ''">
     <div *ngIf="screenComponent$ | async as screenComponent">
         <app-work-info
             *ngIf="screenComponent.toString() == 'WORK_INFO'"
             id="workInfo"
+            [isMobileView]="isMobileView"
             [@fadeInOnEnter]
         ></app-work-info>
 
         <app-projects
             *ngIf="screenComponent.toString() == 'PROJECTS'"
             id="projects"
+            [isMobileView]="isMobileView"
             [@fadeInOnEnter]
         ></app-projects>
     </div>
