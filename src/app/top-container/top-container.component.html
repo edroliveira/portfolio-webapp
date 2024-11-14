@@ -1,8 +1,4 @@
-<header class="global-wrapper">
-    <!-- <figure class="home-wrapper">
-        <img src="assets/svg-icons/home.svg" alt="Home Icon" class="home" />
-    </figure> -->
-
+<header *ngIf="!isMobileView" class="global-wrapper">
     <div class="display-config">
         <div class="content-wrapper">
             <div class="top">
@@ -44,5 +40,22 @@
                 </div>
             </div>
         </ng-container>
+    </div>
+</header>
+
+<header *ngIf="isMobileView" class="global-wrapper-mobile">
+    <div class="display-config">
+        <div style="margin-left: 40px; align-content: center;">
+            <span class="break-font title-mobile"> PORTFOLIO </span>
+        </div>
+
+        <div>
+            <img
+                (click)="openDialog()"
+                src="assets/svg-icons/menu.svg"
+                alt="Menu Icon"
+                class="menu-icon"
+            />
+        </div>
     </div>
 </header>

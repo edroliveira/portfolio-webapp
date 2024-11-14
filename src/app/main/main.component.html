@@ -1,8 +1,8 @@
 <div #topElementRef></div>
 
-<app-top-container></app-top-container>
+<app-top-container [isMobileView]="isMobileView"></app-top-container>
 
-<div class="icon-wrapper" #bottomElementRef>
+<div *ngIf="!isMobileView" class="icon-wrapper" #bottomElementRef>
     <figure *ngIf="scrolling$ | async as scrolling">
         <img
             *ngIf="scrolling.toString() == 'TOP'"
@@ -25,5 +25,4 @@
     </figure>
 </div>
 
-<app-content-container>
-</app-content-container>
+<app-content-container [isMobileView]="isMobileView"></app-content-container>

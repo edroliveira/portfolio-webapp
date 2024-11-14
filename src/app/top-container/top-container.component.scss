@@ -3,6 +3,11 @@
     color: #f5f5dc;
 }
 
+.title-mobile {
+    font-size: 50px;
+    color: #f5f5dc;
+}
+
 .global-wrapper {
     background-image: url('../../assets/images/background.png');
     max-width: 100%;
@@ -14,20 +19,23 @@
     border-bottom-right-radius: 112px;
 }
 
-.home-wrapper {
-    margin: 20px 0 0 20px;
+.global-wrapper-mobile {
+    height: 100px;
+    background-image: url('../../assets/images/background.png');
+    max-width: 100%;
+    overflow: hidden;
+    background-repeat: round;
+    background-size: 100%;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    align-content: center;
+}
 
-    .home {
-        width: 55px;
-        height: 55px;
-        filter: invert(100%) sepia(100%) saturate(609%) hue-rotate(314deg) brightness(108%) contrast(25%);
-        cursor: pointer;
-        transition: 0.2s;
-    }
-
-    .home:hover {
-        filter: invert(100%) sepia(100%) saturate(609%) hue-rotate(314deg) brightness(108%) contrast(100%);
-    }
+.menu-icon {
+    width: 55px;
+    height: 55px;
+    filter: invert(100%) sepia(70%) saturate(609%) hue-rotate(314deg) brightness(108%) contrast(100%);
+    cursor: pointer;
 }
 
 .display-config {
