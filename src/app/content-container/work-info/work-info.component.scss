@@ -33,6 +33,20 @@
     }
 }
 
+.profile-mobile {
+    width: 150px;
+    height: 150px;
+    margin: auto;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 4px solid #000000;
+
+    .profile-pic {
+        max-width: 150px;
+        margin-top: -25px;
+    }
+}
+
 .bio {
     margin-top: 30px;
     text-align: center;
@@ -84,4 +98,13 @@
             font-size: 20px;
         }
     }
+}
+
+.projects-btn {
+    width: 100%;
+    margin: 15px 0 10px;
+    border-radius: 20px;
+    font-size: 18px;
+    padding: 20px;
+    background-color: rgba(8, 99, 169, 0.126);
 }

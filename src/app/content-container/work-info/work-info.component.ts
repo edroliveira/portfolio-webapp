@@ -3,6 +3,9 @@ import { WorkDataItem } from 'src/app/shared/model/work-data-item';
 import { workData } from './data/work-data';
 import { TechBrand } from 'src/app/shared/model/tech-brand';
 import { techData } from './data/tech-data';
+import { Store } from '@ngxs/store';
+import { SetScreenComponent } from 'src/app/shared/action/screen-component-action';
+import { ScreenComponentEnum } from 'src/app/shared/model/enum/screen-component.enum';
 
 
 @Component({
@@ -20,6 +23,10 @@ export class WorkInfoComponent implements OnInit {
   techBrands: TechBrand[] = techData;
   isAutoExpandDisabled: boolean = false;
 
+  constructor(
+    private store: Store
+  ) {}
+
   ngOnInit(): void {
     this.getAge();
   }
@@ -36,6 +43,15 @@ export class WorkInfoComponent implements OnInit {
 
   disableAutoExpansion() {
     this.isAutoExpandDisabled = true;
+  }
+
+  openProjectsComponent() {
+    this.store.dispatch(
+      new SetScreenComponent({
+        displayText: 'ACESSE MEUS PROJETOS',
+        screenComponent: ScreenComponentEnum.PROJECTS,
+      })
+    );
   }
 
 }
